@@ -1,6 +1,6 @@
 import cv2, os, subprocess
 
-def video_to_jpgs(video_path, save_path, do_resize=True, shorter_side=256):
+def video_to_jpgs(video_path, save_path, do_resize=True, shorter_side=336):
   """
   Extract individual frames from a video.
   :param video_path:          Path to the video file.
@@ -15,14 +15,14 @@ def video_to_jpgs(video_path, save_path, do_resize=True, shorter_side=256):
   if not cap.isOpened():
     return False
 
-  i = 0
+  i = 1
   res, frame = cap.read()
 
   while res:
     if do_resize:
       frame = resize(frame, shorter_side=shorter_side)
 
-    cv2.imwrite(os.path.join(save_path, "frame{:d}.jpg".format(i)), frame, [int(cv2.IMWRITE_JPEG_QUALITY), 75])
+    cv2.imwrite(os.path.join(save_path, "{:05d}.jpg".format(i)), frame, [int(cv2.IMWRITE_JPEG_QUALITY), 75])
     res, frame = cap.read()
     i += 1
 
