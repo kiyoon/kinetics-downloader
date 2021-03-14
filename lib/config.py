@@ -5,10 +5,10 @@ TRAIN_ROOT = os.path.join(DATASET_ROOT, "train")
 VALID_ROOT = os.path.join(DATASET_ROOT, "valid")
 TEST_ROOT = os.path.join(DATASET_ROOT, "test")
 
-DATASET_ROOT2 = "/disk/scratch_fast1/s1884147/datasets/OnlyTimeCanTell/kinetics-400"
-TRAIN_FRAMES_ROOT = os.path.join(DATASET_ROOT2, "train_frames")
-VALID_FRAMES_ROOT = os.path.join(DATASET_ROOT2, "valid_frames")
-TEST_FRAMES_ROOT = os.path.join(DATASET_ROOT2, "test_frames")
+DATASET_ROOT2 = "/disk/scratch_fast1/s1884147/datasets/OnlyTimeCanTell/kinetics-400/frames"
+TRAIN_FRAMES_ROOT = os.path.join(DATASET_ROOT2, "train")
+VALID_FRAMES_ROOT = os.path.join(DATASET_ROOT2, "valid")
+TEST_FRAMES_ROOT = os.path.join(DATASET_ROOT2, "test")
 
 TRAIN_SOUND_ROOT = os.path.join(DATASET_ROOT, "train_sound")
 VALID_SOUND_ROOT = os.path.join(DATASET_ROOT, "valid_sound")
